@@ -1,6 +1,6 @@
 1\. Composition 
 
-Example in the Code: https://github.com/skiadas/battleship/blob/6e2b7dff2e2b947be6aefa0ae29c3c6385df32e0/src/main/java/core/Grid.java#L13C5-L13C27 
+[**Example in the Code**](https://github.com/skiadas/battleship/blob/6e2b7dff2e2b947be6aefa0ae29c3c6385df32e0/src/main/java/core/Grid.java#L13C5-L13C27): 
 
 A representation of composition in our project can be seen in the grid class where there is a call to the Cell object in a 2D array used to form a grid. This grid contains multiple Cell objects, each of which represents an individual location upon the game board.
 
@@ -10,7 +10,7 @@ Composition gives room to create more flexible and reusable code. For instance, 
 
 2\. Depending on an Interface Instead of an Implementation 
 
-Example in the Code: https://github.com/skiadas/battleship/blob/6e2b7dff2e2b947be6aefa0ae29c3c6385df32e0/src/main/java/core/GameDriver.java#L6C1-L11C6 
+[**Example in the Code**](https://github.com/skiadas/battleship/blob/6e2b7dff2e2b947be6aefa0ae29c3c6385df32e0/src/main/java/core/GameDriver.java#L6C1-L11C6):
 
 Within the GameDriver class, the Presenter interface is used to interact with the player. Rather than defaulting to an implementation like TextPresenter, the game depends on he Presenter interface. This leaves room for flexibility down the line, where any changes to the format of presentation can be done in the without changes being required in the GameDriver. 
 
@@ -20,7 +20,7 @@ Depending on an interface rather than on an implementation allows you to block a
 
 3\. Subclasses and Inheritance 
 
-Example in the Code: https://github.com/skiadas/battleship/blob/6e2b7dff2e2b947be6aefa0ae29c3c6385df32e0/src/main/java/core/GameDriver.java#L6C1-L11C6 
+[**Example in the Code**](https://github.com/skiadas/battleship/blob/6e2b7dff2e2b947be6aefa0ae29c3c6385df32e0/src/main/java/core/GameDriver.java#L6C1-L11C6):
 
 Although it is an enum rather than a subclass, an example of inheritance can be seen by the Direction enum in the Ship class, which contains two possible values: HORIZONTAL and VERTICAL. This enum restricts the ship class by giving it two directions to work with, managing the code efficiently. Its use could be extended however; for instance, an added DIAGONAL direction could add more opportunities to the ship class without having to alter any present logic for the ship class itself.  
 
